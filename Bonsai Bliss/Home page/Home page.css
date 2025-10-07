@@ -1,0 +1,288 @@
+:root {
+    --dark-green: #455B43;
+    --medium-green: #819067;
+    --light-green: #9CB380;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--dark-green);
+    min-height: 100vh;
+    background: var(--white) url('bgpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(230, 230, 230, 0.5); 
+}
+
+/*  HEADER/FOOTER DESIGN OVERRIDE (for Desktop/Tablet look) This centers the header and footer bars and gives them a max-width.*/
+.designed-bar {
+    max-width: 95vw; 
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: var(--light-green); 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    position: relative; 
+    z-index: 10;
+}
+
+
+/* --- HEADER/NAV STYLES --- */
+header {
+  background-color: var(--light-green);
+  padding: 8px 40px; /* thinner header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+    flex-shrink: 0; 
+    z-index: 30; 
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto; 
+    z-index: 20; 
+    vertical-align: middle; 
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.0em; 
+    color: var(--black); 
+    font-weight: 700; 
+    margin-left: 5px; 
+    position: relative; 
+    top: 0; 
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: var(--black); 
+    font-weight: 700; 
+    font-size: 1em; 
+    transition: color 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: var(--white); 
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 30px;
+    color: var(--dark-green); 
+}
+
+.header-icons .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0;
+    line-height: 0; 
+}
+
+.header-icons .icon-button img {
+    height: 25px; 
+    width: 25px;
+    vertical-align: middle;
+}
+
+/* Hides the hamburger icon by default (desktop view) */
+.menu-toggle-icon {
+    display: none; 
+}
+
+/* MAIN CONTENT */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 8%;
+    min-height: 85vh;
+}
+
+.content {
+    max-width: 45%;
+}
+
+.content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+.content .highlight {
+    color: var(--medium-green);
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.secondary {
+    background: var(--medium-green);
+    color: var(--white);
+}
+
+.primary:hover,
+.secondary:hover {
+    opacity: 0.85;
+}
+
+/* SOCIALS */
+.socials a {
+    color: var(--black);
+    font-size: 1.4rem;
+    margin-right: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.socials a:hover {
+    color: var(--medium-green);
+    transform: scale(1.2);
+}
+
+/* BONSAI IMAGE */
+.bonsai-img img {
+    width: 450px;
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.3));
+}
+
+/* FOOTER */
+footer {
+    background: var(--light-green);
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE MENU (MOBILE) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /*flex-wrap: nowrap;  prevent wrapping */
+        padding: 8px 15px;
+        border-radius: 0;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+
+    }
+
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }   
+
+    .menu-toggle-icon {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+
+    /* Move nav below header when active */
+    nav {
+        width: 100%;
+        text-align: center;
+        background: var(--light-green);
+        display: none;
+        flex-direction: column;
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.active {
+        display: flex;
+        max-height: 300px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .bonsai-img img {
+        width: 300px;
+        margin-top: 2rem;
+    }
+}

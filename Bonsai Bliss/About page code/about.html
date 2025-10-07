@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Bliss - About Us</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&family=Hedvig+Letters+Serif:wght@400&family=Inria+Serif:ital,wght@1,300&display=swap">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <input type="file" id="fileInput" name="userPicture" accept="image/*" style="display: none;">
+
+    <header class="designed-bar">
+        <div class="logo-container">
+            <img src="Logo.png" alt="Bonsai Bliss Logo" class="logo-img">
+        </div>
+        
+        <nav class="main-nav"> 
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Gallery</a></li>
+                <li><a href="#" class="nav-link">Styles</a></li>
+                <li><a href="#" class="nav-link active">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <button class="icon-button search-icon">
+                <img src="search.png" alt="Search">
+            </button>
+            
+            <button class="icon-button menu-toggle-icon">
+                <img src="menu-burger.png" alt="Menu">
+            </button>
+        </div>
+    </header>
+    <div class="about-page-content">
+        
+        <div class="leaf-image"></div>
+
+        <div class="content-container">
+            
+            <section class="about-intro-section">
+                <div>
+                    <h1 class="main-heading">About Us</h1>
+                    <p class="intro-paragraph">Bonsai Bliss is dedicated to sharing the art and beauty of bonsai. Our mission is to inspire people to appreciate miniature trees as living art, while providing guides, designs, and community features for bonsai enthusiasts.</p>
+                </div>
+                
+                <div class="button-content">
+                    <button class="cta-button" onclick="joinCommunity()">JOIN OUR COMMUNITY</button>
+                    <button class="cta-button" onclick="triggerFileUpload()">SEND YOUR PICTURES</button>
+                </div>
+            </section>
+
+            <section class="mission-vision-section">
+                <div class="section-card">
+                    <h2 class="sub-heading">Mission</h2>
+                    <p class="body-text">Our mission is to share the beauty of bonsai by providing inspiration, practical guides, and a welcoming community for enthusiasts.</p>
+                </div>
+                <div class="section-card">
+                    <h2 class="sub-heading">Vision</h2>
+                    <p class="body-text">Our vision is to inspire a global appreciation of bonsai as living art and connect enthusiasts through guidance and community.</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <footer class="designed-bar">
+        <div class="quote-bar">
+            <span class="icon-placeholder">
+                <img src="footer.png" alt="Bonsai Icon">
+            </span>
+            <p class="footer-quote">
+                “The bonsai is not you working on the tree, you have to have the tree work on you.”
+                <span class="quote-author">– John Naka</span>
+            </p>
+            <span class="icon-placeholder">
+                <img src="footer.png" alt="Bonsai Icon">
+            </span>
+        </div>
+    </footer>
+    <script>
+        // FUNCTIONALITY FOR THE BUTTONS
+        function joinCommunity() {
+        // AFTER CLICKING THE JOIN OUR COMMUNITY MAPUPUNTA SYA SA CONTACT.HTML
+        window.location.href = 'contact.html'; 
+        console.log('Action: Redirecting user to contact.html');
+        }
+
+        function triggerFileUpload() {
+            // SEND YOUR PICTURES BUTTON 
+            document.getElementById('fileInput').click();
+            console.log('Action: Triggered native file upload dialog.');
+        }
+
+        // FUNCTIONALITY FOR MOBILE MENU TOGGLE
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle-icon');
+            const header = document.querySelector('header');
+
+            if (menuToggle && header) {
+                // Toggles the 'menu-active' class on the header when the hamburger icon is clicked
+                menuToggle.addEventListener('click', function() {
+                    header.classList.toggle('menu-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

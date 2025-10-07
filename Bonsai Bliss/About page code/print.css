@@ -1,0 +1,78 @@
+/* Print CSS - styles applied only when the page is printed */
+@media print {
+    /* HIDE UNNECESSARY ELEMENTS */
+    header, /* Hide navigation and header logos/icons */
+    .header-icons,
+    nav,
+    .leaf-image, /* Hide the large side image */
+    .button-content, 
+    .icon-placeholder, /* Hide the footer icons */
+    .footer-quote .quote-author /* Only keep the main quote, author is secondary */
+    {
+        display: none !important;
+    }
+
+    /* GENERAL STYLES */
+    body {
+        background: none !important; /* Remove background color/texture */
+        color: #000 !important; /* Ensure all text is black for clarity */
+        font-size: 12pt; 
+    }
+
+    /* CONTENT LAYOUT ADJUSTMENTS */
+    .about-page-content {
+        padding: 0;
+        min-height: auto;
+    }
+    
+    .content-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ensure text flows correctly by removing flex/float from main sections */
+    .about-intro-section {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* MISSION AND VISION SECTION */
+    .mission-vision-section {
+        display: block; 
+        max-width: 100%;
+    }
+
+    .section-card {
+        margin-bottom: 15pt;
+    }
+
+    /* HEADINGS & TEXT */
+    h1, h2 {
+        color: #000 !important;
+        page-break-after: avoid; 
+    }
+    .main-heading {
+        font-size: 24pt;
+    }
+    .sub-heading {
+        font-size: 18pt;
+    }
+    .intro-paragraph, .body-text {
+        font-size: 11pt;
+    }
+
+    /* FOOTER/QUOTE */
+    footer {
+        background: none !important; 
+        border-top: 1px solid #ccc;
+        padding: 10pt 0;
+    }
+    .footer-quote {
+        color: #000 !important;
+        text-align: left;
+        font-style: normal; 
+        max-width: 100%;
+    }
+}

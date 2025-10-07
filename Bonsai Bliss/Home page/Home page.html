@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Bliss</title>
+    <link rel="stylesheet" href="Home page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Logo.png" alt="Bonsai Bliss Logo" class="logo-img">
+            <span class="logo-text">Bonsai Bliss</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Gallery</a></li>
+                <li><a href="#" class="nav-link">Styles</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <button class="icon-button">
+                <img src="search.png" alt="Search Icon">
+            </button>
+            <button class="icon-button menu-toggle-icon">
+                <img src="menu-burger.png" alt="Menu Icon">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Mastering the<br><span>Art of <span class="highlight">Bonsai</span></span></h2>
+            <p>Experience the timeless essence of bonsai, a living journey of balance and beauty.</p>
+            <div class="buttons">
+                <a href="#" class="btn primary">EXPLORE</a>
+                <a href="#" class="btn secondary">JOIN OUR COMMUNITY</a>
+            </div>
+            <div class="socials">
+                <a href="#"><img src="facebook.png" alt="Facebook" style="height:24px;"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram" style="height:24px;"></a>
+                <a href="#"><img src="youtube.png" alt="YouTube" style="height:24px;"></a>
+            </div>
+        </div>
+
+        <div class="bonsai-img">
+            <img src="Bonsai Home.png" alt="Beautiful Bonsai Tree">
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Bonsai Bliss. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle-icon');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
